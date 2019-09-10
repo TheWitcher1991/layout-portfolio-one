@@ -1,0 +1,490 @@
+@import variables
+@import mixins
+@import media
+
+/* 1. NORMALINE */
+/* ============================================================================================================== */
+-webkit-::selection
+    background-color: $fg-basic
+    color: $fg-from-white
+
+-moz-::selection
+    background-color: $fg-basic
+    color: $fg-from-white
+
+-ms-::selection
+    background-color: $fg-basic
+    color: $fg-from-white
+
+-o-::selection
+    background-color: $fg-basic
+    color: $fg-from-white
+
+::selection
+    background-color: $fg-basic
+    color: $fg-from-white
+
+article, aside, details, main, figcaption, figure, footer, header, hgroup, menu, nav, section
+	display: block
+
+*, *:before, *:after
+	box-sizing: border-box
+	+indentation(0, 0)
+	text-decoration: none
+
+html, body
+    overflow-x: hidden
+   	+start(0, 100%)
+
+/* 2. FORM */
+/* ============================================================================================================== */
+textarea
+	outline: none
+	resize: none
+    border: none
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"]
+	outline: none
+	border: 0
+    font-family: sans-serif
+
+input[type="button"], input[type="submit"]
+	cursor: pointer
+	outline: none
+	border: 0
+
+.form__info__user
+
+    input
+        float: left
+        width: 45%
+        margin-right: 10%
+        margin-bottom: 20px
+        padding-bottom: 8px
+        border: none
+        border-bottom: 1px solid #474747
+        background: none
+        text-transform: uppercase
+        font-size: 14px
+        color: #999
+
+        &:last-child
+            margin: 0
+
+#textImp
+    width: 100%
+    font-family: sans-serif
+    border: none
+    height: 35px
+    padding-bottom: 8px
+    margin-bottom: 70px
+    border-bottom: 1px solid #474747
+    background: none
+    text-transform: uppercase
+    font-size: 14px
+    line-height: 24px
+    color: #999
+
+.form__submit
+    position: relative
+    display: inline-block
+    padding-right: 15px
+    
+    #submit
+        border: none
+        background: none
+        font-size: 15px
+        color: #999
+        padding: 0 0 0 5px
+        text-transform: uppercase
+
+    i 
+        position: absolute;
+        top: 3px;
+        right: 0
+
+/* 3. BUTTON */
+/* ============================================================================================================== */
+#open__menu
+    position: fixed
+    top: 0
+    padding: 12px 20px 15px 15px
+    border-radius: 0 0 30px
+    cursor: pointer
+    left: 0
+    z-index: 1
+    font-size: 1.4rem
+    color: #fff
+    background-color: $fg-basic
+    border: 0
+    outline: none
+    transition: $transition-glob
+
+    &:hover
+        background-color: #5f9cc3
+
+/* 4. MAIN */
+/* ============================================================================================================== */
+#wrapper
+    +wrapper(0, 0, 100%, 100%)
+
+/* 5. ASIDE */
+/* ============================================================================================================== */
+#aside
+    +aside(fixed, 0, -400px, none, 100%, #ffffff, translateZ(0), hidden, 2)
+
+    .aside__close
+        display: flex
+        width: 100%
+        margin: 0 0 25px 30px
+        padding: 40px 0 0 0
+
+        h1
+            font-size: 1.4rem
+            font-weight: 400
+            text-align: center
+
+        i
+            margin-left: 122px
+            padding: 5px 0 0 0
+            cursor: pointer
+            transition: $transition-glob
+
+            &:hover
+                color: $fg-basic
+
+    .aside__ul
+        margin: 0 30px
+        padding: 0
+        list-style: none
+        display: block
+
+        li
+            position: relative
+
+            a
+                color: $fg-from-white
+                font-size: $h2-text
+                display: block
+                padding: 25px 120px 25px 15px
+                transition: $transition-glob
+                border-bottom: 2px solid $fg-basic
+
+                i
+                    font-size: $h2-text
+
+                &:hover
+                    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+                    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+                    -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+                    -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+                    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+                    background-color: $fg-basic
+                    transform: translateX(15%)
+                    color: #fff
+
+/* 6. HEADER */
+/* ============================================================================================================== */
+#header
+    +header(100%, 660px, url("../img/facts.jpg") center no-repeat, cover)
+
+    .container
+        position: relative
+        max-width: $max-width
+        margin: 0 auto
+
+        .header__banner
+            max-width: 650px
+            margin: 0 auto
+            padding: 120px 0 0 0
+            color: #212121
+            font-family: "SourceSansProBold", Arial, sans-serif
+
+            .header__banner__title
+                position: relative
+                display: block
+                text-transform: uppercase
+                font-size: 4rem
+                font-family: $font-bold-text
+                margin: 0 0 70px 0
+                text-align: right
+
+                &:after
+                    content: "";
+                    position: absolute;
+                    bottom: -25px;
+                    right: 0;
+                    display: block;
+                    width: 200px;
+                    height: 4px;
+                    background-color: #000;
+
+            .header__banner__text
+                line-height: 33px
+                font-size: $h2-text
+                text-align: right
+                font-weight: 600
+                font-family: $font-light-text
+
+            .header__banner__bth
+                +header-banner-bth(block, 60px, #fff, 20px 0, 2px, 2px solid #212121, 500, center, $h2-text, $font-min-text)
+
+                &:hover
+                    background-color: #5f9cc3
+                    transform: scale(1.1)
+
+/* 7. ARTICLE */
+/* ============================================================================================================== */
+#article
+    +article(100%, block, 0, 0)
+
+    .portfolio
+        width: 100%
+        display: block
+
+        .portfolio__title__div, .portfolio__text__div
+            background-color: #212121
+            color: #fff
+
+            .portfolio__title__h1
+                padding: 60px 0 80px 0
+                max-width: 301px
+                margin: 0 auto
+                text-align: center
+
+                h1
+                    font-size: 3.9rem
+                    font-family: $font-min-text
+                    position: relative
+
+                    &:after
+                        content: ""
+                        position: absolute
+                        bottom: -25px
+                        right: 0
+                        display: block
+                        width: 110px
+                        height: 4px
+                        background-color: #fff
+
+        .portfolio__img__div
+            background-color: #efefef
+            color: $fg-from-white
+            width: 100%
+
+            .portfolio__img__ul
+                margin: 0
+                padding: 35px 0
+
+                ul
+                    padding: 15px 0
+                    max-width: 520px
+                    margin: 0 auto
+                    display: flex
+                    border-bottom: 3px solid $fg-basic
+                    list-style: none
+                    justify-content: center
+
+                    li
+                        font-size: 1.5rem
+                        margin-left: 50px
+                        font-family: $font-min-text
+                        position: relative
+
+                        &:nth-child(1)
+                            margin-left: 0
+
+            .portfolio__img__block
+                display: flex
+                width: 10816px;
+                transform: translate3d(-1352px, 0px, 0px);
+
+                div
+                    width: 338px
+
+                    img
+                        width: 100%
+                        height: 100%
+
+        .portfolio__text__p
+            padding: 60px 200px;
+            font-size: 1.3rem;
+            line-height: 40px;
+            text-align: center;
+            font-family: $font-min-text;
+            display: none
+
+    .about
+        display: block
+        width: 100%
+        background-color: #212121
+
+        .about__title
+            padding: 60px 0 80px 0
+            position: relative
+            color: #fff
+            max-width: 223px
+            margin: 0 auto
+            text-align: center
+
+            h1
+                font-size: 4rem
+                font-family: $font-min-text
+                position: relative
+
+                &:after
+                    content: ""
+                    position: absolute
+                    bottom: -20px
+                    right: 0
+                    display: block
+                    width: 90px
+                    height: 4px
+                    background-color: #fff
+
+        .about__skills__main
+            width: 100%
+            display: block
+            background-color: #efefef
+
+            .about__skills
+                padding: 90px 0
+                max-width: $max-width
+                margin: 0 auto
+                display: block
+
+                .item 
+                    display: flex
+                    margin-bottom: 50px
+
+                    .block-4
+                        margin-bottom: 0
+                    
+                    .skills_item
+                        text-align: center
+                        width: 48%
+
+                        .text
+                            max-width: 420px
+                            margin: 0 auto
+                            padding-top: 80px
+                            font-family: $font-min-text
+
+                            span 
+                                color: #555;
+                                font-size: 15px
+                                font-weight: 600
+                                font-family: $font-light-text
+
+                            h2 
+                                margin-bottom: 45px
+                                font-size: 3rem
+                                margin-top: 10px
+                                font-family: $font-light-text
+                            
+                            p
+                                line-height: 26px
+                                font-size: 17px
+
+                        img
+                            width: 500px
+                            height: 430px
+
+                    .skills_item:first-child
+                        margin-right: 4%
+
+                    
+        .about__tm__info__main
+            width: 100%
+            background: #fff
+            text-align: center
+            color: #212121
+            padding: 70px 0 30px 0
+
+            div
+                margin: 0 0 40px 0
+
+            .block-1
+                font-size: 2rem
+
+            .block-2
+
+                img 
+                    width: 65px
+                    height: 65px 
+                    border-radius: 50%
+
+            .block-4 
+                font-style: italic;
+                font-weight: 400;
+                font-size: 20px;
+
+/* 8. FOOTER */
+/* ============================================================================================================== */
+footer 
+    +footer(100%, #212121, #999, 0, 75px 0 40px 0)
+
+    .container 
+        max-width: $max-width
+        margin: 0 auto
+        display: flex
+        overflow: hidden;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #474747;
+
+        .footer__block__1
+            width: 100%
+            max-width: 560px
+
+            .footer__logo
+                font-size: 24px
+                text-transform: uppercase
+                color: #fff
+                margin-bottom: 35px
+                font-family: $font-bold-text
+
+            .footer__logo__text
+                    margin-bottom: 25px
+                    font-size: 14px
+                    line-height: 24px
+
+        .footer__block__2
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            justify-content: flex-end;
+
+            .footer__info__block
+                width: 30%;
+                margin-right: 10%;
+
+                &:last-child
+                    margin: 0
+
+                .info__title
+                    display: block;
+                    margin-bottom: 30px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    font-size: 16px;
+
+                ul
+                    margin: 0
+                    padding: 0
+                    list-style: none
+
+                    li
+                        margin-bottom: 10px
+
+                        a 
+                            color: #999
+                            font-size: 14px
+
+                            &:hover
+                                color: #b3b3b3
+
+    .container__info
+        max-width: $max-width
+        margin: 30px auto
+        font-family: $font-min-text
+        font-size: 15px

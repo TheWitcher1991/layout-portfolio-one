@@ -1,0 +1,67 @@
+=start($number, $size)
+    width: $size
+    height: $size
+    margin: $number
+    padding: $number
+    font: $font-website
+    background-color: $bg-website
+
+=indentation($number1, $number2)
+    margin: $number1
+    padding: $number2
+
+=size-block($width, $height)
+    width: $width
+    height: $height
+
+=wrapper($number1, $number2, $width, $height)
+    margin: $number1
+    padding: $number2
+    width: $width
+    height: $height
+
+=header($width, $height, $img, $size)
+    width: $width
+    height: $height
+    background: $img
+    background-size: $size
+
+=article($width, $block, $margin, $padding)
+    width: $width
+    display: $block
+    margin: $margin
+    padding: $padding
+
+=aside($pos, $top, $left, $width, $height, $bg, $transform, $vis, $index)
+    position: $pos
+    top: $top
+    left: $left
+    width: $width
+    height: $height
+    background-color: $bg
+    transform: $transform
+    backface-visibility: $vis
+    transition: $transition-glob
+    z-index: $index
+
+=header-banner-bth($dis, $margin, $color, $padding, $br, $b, $fw, $ta, $fs, $ff)
+    display: $dis
+    margin-top: $margin
+    color: $color
+    padding: $padding
+    border-radius: $br
+    border: $b
+    font-weight: $fw
+    text-align: $ta
+    font-size: $fs
+    font-family: $ff
+    background-color: $fg-basic
+    transition: $transition-glob
+
+=footer($width, $bg, $color, $margin, $padding)
+    width: $width
+    background-color: $bg
+    color: $color
+    margin: $margin
+    padding: $padding
+    font-family: $font-min-text
